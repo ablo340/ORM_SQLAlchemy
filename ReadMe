@@ -1,0 +1,51 @@
+#Object-Relational Mapping
+
+#####Auteur: Kolawolé Abdoulaye
+#####Matricule: 14084
+
+##Introduction
+Cet application permet la gestion de jeux video.
+Et pour ce travail j'utilise SQLAlchemy.
+
+####SQLALCHEMY
+SQLAlchemy est un toolkit open source SQL et un mapping objet-relationnel (ORM) écrit en Python et publié sous licence MIT.
+
+SQLAlchemy a opté pour l'utilisation du pattern Data Mapper plutôt que l'active record utilisés par de nombreux autres ORM.
+
+#####Instalation
+    - pip install sqlalchemy
+
+##Travail
+Comme dit dans l'introduction, cet application sert à gérer des jeux vidéo
+On peut ainsi non seulement stocker des jeux et des consoles.
+Pour les jeux on stockera le nom, la description et la console sur laquelle ce jeu est disponible.
+Pour les consoles on stockera le nom et le fabricant.
+Cet application propose les requêtes CRUD (Create, Read, Update and Delete).
+On pouura ainsi voir tous les jeux disponibles, créer, mettre à jour et supprimer un jeu.
+On peut aussi la faire la recherche d'un jeu et voir ses détails.
+Ces fonctions sur les jeux ont aussi valables pour les consoles.
+
+##Relation entre tables
+Il existe donc dans la base de donnée SQLite deux tables: Game et Console
+Il extiste une relation "One to Many" entre ces deux tables.
+Une console contient ainsi une liste de jeu mais un jeu ne peut avoir qu'une et une seule console.
+Cette relation est montrée sur l'image "Diagram.jpg" du projet.
+
+##Détails du projet
+
+####database.py
+Permet de créer les deux tables "Game" et "Console" dans la base de donnée.
+
+####db_request.py
+Il se trouve dans ce fichier toutes les fonctions qui permettent d'exécuter les requêtes.
+
+####Insertion
+A l'execution de ce fichier, la base de donnée sera peupler avec quelques consoles et jeux
+N.B: Ne pas exécuter ce programme au premier à bord, car la base de donnée est sensée être déjà peuplée.
+    
+####main
+C'est l'exécutable de cet application.
+
+##Lacement de l'application
+    - lancer main.py
+
